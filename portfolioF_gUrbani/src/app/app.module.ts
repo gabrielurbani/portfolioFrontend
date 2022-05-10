@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
-import { BannerComponent } from './components/banner/banner.component';
-import { SocialComponent } from './components/social/social.component';
-import { LoguinComponent } from './components/loguin/loguin.component';
-import { HeroeComponent } from './components/heroe/heroe.component';
+import { HeaderComponent } from './components/_header/header/header.component';
+import { NavbarComponent } from './components/_header/navbar/navbar.component';
+import { BannerComponent } from './components/_header/banner/banner.component';
+import { SocialComponent } from './components/_header/social/social.component';
+import { LoguinComponent } from './components/_header/loguin/loguin.component';
+import { HeroeComponent } from './components/_header/heroe/heroe.component';
+import { LogoComponent } from './components/_header/logo/logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavbarComponent,
-    LogoAPComponent,
+    LogoComponent,
     BannerComponent,
     SocialComponent,
     LoguinComponent,
