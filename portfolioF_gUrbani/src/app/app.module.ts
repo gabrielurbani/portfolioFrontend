@@ -10,6 +10,11 @@ import { SocialComponent } from './components/_header/social/social.component';
 import { LoguinComponent } from './components/_header/loguin/loguin.component';
 import { HeroeComponent } from './components/_header/heroe/heroe.component';
 import { LogoComponent } from './components/_header/logo/logo.component';
+import { AboutComponent } from './components/_body/_about/about/about.component';
+import { ExperienceComponent } from './components/_body/_experience/experience/experience.component';
+import { EducationComponent } from './components/_body/_education/education/education.component';
+import { SkillComponent } from './components/_body/_skill/skill/skill.component';
+import { ProyectComponent } from './components/_body/_proyect/proyect/proyect.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +25,12 @@ import { LogoComponent } from './components/_header/logo/logo.component';
     BannerComponent,
     SocialComponent,
     LoguinComponent,
-    HeroeComponent
+    HeroeComponent,
+    AboutComponent,
+    ExperienceComponent,
+    EducationComponent,
+    SkillComponent,
+    ProyectComponent
   ],
   imports: [
     BrowserModule,
