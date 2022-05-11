@@ -19,6 +19,7 @@ import { NameComponent } from './components/_body/_about/name/name.component';
 import { TextComponent } from './components/_body/_about/text/text.component';
 import { BodyComponent } from './components/_body/body/body.component';
 import { LanguageComponent } from './components/_body/_skill/language/language.component';
+import { FrameworkComponent } from './components/_body/_skill/framework/framework.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { LanguageComponent } from './components/_body/_skill/language/language.c
     NameComponent,
     TextComponent,
     BodyComponent,
-    LanguageComponent
+    LanguageComponent,
+    FrameworkComponent
   ],
   imports: [
     BrowserModule,

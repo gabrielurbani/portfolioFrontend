@@ -1,0 +1,92 @@
+svg.skill {
+    width: 7rem;
+    height: 7rem;
+}
+.icon {
+    width: 4rem;
+    height: 4rem;
+}
+.iconrails {
+    width: 5rem;
+    height: 5rem;
+}
+.skillPath {
+    stroke-linecap: round;
+    stroke-width: 6;
+  }
+  
+  path.grey {
+    stroke: #bebec1;
+  }
+  
+  path#rails {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawRails 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+  path#vue {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawVue .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+  path#angular {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawAngular 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+  
+ 
+  path#bootstrap {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawBootstrap 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+
+  path#svg {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawSvg 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+
+  path#P5 {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawP5 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+ 
+  @keyframes  drawRails {
+    to {
+      stroke-dashoffset: 80; 
+    }}
+   
+  @keyframes drawVue {
+      to {
+        stroke-dashoffset: 70; 
+      }}
+  
+  @keyframes  drawAngular {
+    to {
+      stroke-dashoffset: 100; 
+    }}
+   
+  @keyframes drawBootstrap {
+      to {
+        stroke-dashoffset: 50; 
+      }}
+  
+      @keyframes  drawSvg {
+        to {
+          stroke-dashoffset: 100; 
+        }}
+       
+      @keyframes drawP5 {
+          to {
+            stroke-dashoffset: 40; 
+          }}
+      
