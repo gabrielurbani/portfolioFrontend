@@ -1,0 +1,88 @@
+svg.skill {
+    width: 7rem;
+    height: 7rem;
+}
+.icon {
+    width: 4rem;
+    height: 4rem;
+}
+.skillPath {
+    stroke-linecap: round;
+    stroke-width: 6;
+  }
+  
+  path.grey {
+    stroke: #bebec1;
+  }
+  
+  path#htmlX {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawHtml 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+  path#cssX {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawCss 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+  path#js {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawJs 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+  
+ 
+  path#ruby {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawRuby 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+
+  path#java {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawJava 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+
+  path#ts {
+    stroke: deeppink;
+    stroke-dasharray: 198;
+    stroke-dashoffset: 198;
+    animation: drawTs 3s .5s cubic-bezier(.7,0,.3,1) forwards;
+  }
+ 
+  @keyframes  drawHtml {
+    to {
+      stroke-dashoffset: 20; 
+    }}
+   
+  @keyframes drawCss {
+      to {
+        stroke-dashoffset: 20; 
+      }}
+  
+  @keyframes  drawJs {
+    to {
+      stroke-dashoffset: 20; 
+    }}
+   
+  @keyframes drawRuby {
+      to {
+        stroke-dashoffset: 100; 
+      }}
+  
+      @keyframes  drawJava {
+        to {
+          stroke-dashoffset: 130; 
+        }}
+       
+      @keyframes drawTs {
+          to {
+            stroke-dashoffset: 180; 
+          }}
+      
