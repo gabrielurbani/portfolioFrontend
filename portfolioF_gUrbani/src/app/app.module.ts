@@ -20,6 +20,7 @@ import { TextComponent } from './components/_body/_about/text/text.component';
 import { BodyComponent } from './components/_body/body/body.component';
 import { LanguageComponent } from './components/_body/_skill/language/language.component';
 import { FrameworkComponent } from './components/_body/_skill/framework/framework.component';
+import { HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { FrameworkComponent } from './components/_body/_skill/framework/framewor
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
