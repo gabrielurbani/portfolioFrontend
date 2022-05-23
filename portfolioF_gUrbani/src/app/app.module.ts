@@ -21,6 +21,11 @@ import { BodyComponent } from './components/_body/body/body.component';
 import { LanguageComponent } from './components/_body/_skill/language/language.component';
 import { FrameworkComponent } from './components/_body/_skill/framework/framework.component';
 import { HttpClientModule} from '@angular/common/http';
+import { BodyEditComponent } from './components/_body/body-edit/body-edit.component';
+import { EduEditComponent } from './components/_body/edu-edit/edu-edit.component';
+import { FormsModule } from '@angular/forms';
+import { ExpEditComponent } from './components/_body/exp-edit/exp-edit.component';
+import { ExpAltaComponent } from './components/_body/exp-alta/exp-alta.component';
 
 @NgModule({
   declarations: [
@@ -41,13 +46,18 @@ import { HttpClientModule} from '@angular/common/http';
     TextComponent,
     BodyComponent,
     LanguageComponent,
-    FrameworkComponent
+    FrameworkComponent,
+    BodyEditComponent,
+    EduEditComponent,
+    ExpEditComponent,
+    ExpAltaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

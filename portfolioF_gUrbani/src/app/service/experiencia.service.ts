@@ -15,4 +15,8 @@ export class ExperienciaService {
     return this.httpClient.get<Experiencia[]>(`${this.baseUrl}`)
   }
   
+  saveExperiencia(experiencia:Experiencia): Observable<Object>{
+    return this.httpClient.post(`${this.baseUrl}`,experiencia);
+  }
+  
 }
