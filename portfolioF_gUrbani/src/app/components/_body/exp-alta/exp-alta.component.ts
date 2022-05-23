@@ -19,7 +19,6 @@ export class ExpAltaComponent implements OnInit {
 
   guardarExperiencia(){
     this.experienciaService.saveExperiencia(this.experiencia).subscribe(d =>{
-      console.log(d);
       this.irABody();
 
     }, error => console.log(error));
