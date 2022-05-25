@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ExperienciaService {
   //backend
-  private baseUrl = "http://agile-citadel-97429.herokuapp.com:8080/experiencia";
+  private baseUrl = "https://agile-citadel-97429.herokuapp.com:8080/experiencia";
   constructor (private httpClient : HttpClient) { }
 
   obtenerListaExperiencia():Observable<Experiencia[]>{
