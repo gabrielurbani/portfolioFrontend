@@ -26,7 +26,7 @@ import { EduEditComponent } from './components/_body/edu-edit/edu-edit.component
 import { FormsModule } from '@angular/forms';
 import { ExpEditComponent } from './components/_body/exp-edit/exp-edit.component';
 import { ExpAltaComponent } from './components/_body/exp-alta/exp-alta.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +57,8 @@ import { ExpAltaComponent } from './components/_body/exp-alta/exp-alta.component
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

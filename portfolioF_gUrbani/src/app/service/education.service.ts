@@ -8,11 +8,13 @@ import { Education } from '../class/education';
 })
 export class EducationService {
   //backend
-  private baseUrl = "https://agile-citadel-97429.herokuapp.com:8080/education";
-  constructor(private httpClient: HttpClient) { }
+  //private baseUrl = "https://agile-citadel-97429.herokuapp.com:8080/education";
+  private baseUrl = "https://agile-citadel-97429.herokuapp.com/education";
+
+  constructor(private http: HttpClient) { }
 
   obtenerListaEducation(): Observable<Education[]> {
-    return this.httpClient.get<Education[]>(`${this.baseUrl}`)
+    return this.http.get<Education[]>(`${this.baseUrl}`)
   }
 
 }

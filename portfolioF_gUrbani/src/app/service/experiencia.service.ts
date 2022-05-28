@@ -8,15 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class ExperienciaService {
   //backend
-  private baseUrl = "https://agile-citadel-97429.herokuapp.com:8080/experiencia";
-  constructor (private httpClient : HttpClient) { }
+  //private baseUrl = "https://agile-citadel-97429.herokuapp.com:8080/experiencia";
+  private baseUrl = "https://agile-citadel-97429.herokuapp.com/experiencia";
+
+  constructor (private http : HttpClient) { }
 
   obtenerListaExperiencia():Observable<Experiencia[]>{
-    return this.httpClient.get<Experiencia[]>(`${this.baseUrl}`)
+    return this.http.get<Experiencia[]>(`${this.baseUrl}`)
   }
   
   saveExperiencia(experiencia:Experiencia): Observable<Object>{
-    return this.httpClient.post(`${this.baseUrl}`,experiencia);
+    return this.http.post(`${this.baseUrl}`,experiencia);
   }
   
 }
