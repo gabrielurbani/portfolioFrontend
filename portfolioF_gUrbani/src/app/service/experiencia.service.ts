@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Experiencia } from '../class/experiencia';
+import { Experiencia } from 'src/environments/experiencia';
 import { Observable } from 'rxjs';
 
 @Injectable({

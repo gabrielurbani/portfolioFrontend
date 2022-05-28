@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Experiencia } from 'src/app/class/experiencia';
+import { Experiencia } from 'src/environments/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 
 @Component({

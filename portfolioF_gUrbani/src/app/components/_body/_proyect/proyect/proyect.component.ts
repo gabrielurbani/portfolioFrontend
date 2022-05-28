@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Projects } from 'src/app/class/projects';
+import { Projects } from 'src/environments/projects';
 import { ProjectsService } from 'src/app/service/projects.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
