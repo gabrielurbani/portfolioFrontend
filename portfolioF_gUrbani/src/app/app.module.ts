@@ -10,13 +10,11 @@ import { SocialComponent } from './components/_header/social/social.component';
 import { LoguinComponent } from './components/_header/loguin/loguin.component';
 import { HeroeComponent } from './components/_header/heroe/heroe.component';
 import { LogoComponent } from './components/_header/logo/logo.component';
-import { AboutComponent } from './components/_body/_about/about/about.component';
+import { AboutComponent } from './components/_body/about/about.component'
 import { ExperienceComponent } from './components/_body/_experience/experience/experience.component';
 import { EducationComponent } from './components/_body/_education/education/education.component';
 import { SkillComponent } from './components/_body/_skill/skill/skill.component';
 import { ProyectComponent } from './components/_body/_proyect/proyect/proyect.component';
-import { NameComponent } from './components/_body/_about/name/name.component';
-import { TextComponent } from './components/_body/_about/text/text.component';
 import { BodyComponent } from './components/_body/body/body.component';
 import { LanguageComponent } from './components/_body/_skill/language/language.component';
 import { FrameworkComponent } from './components/_body/_skill/framework/framework.component';
@@ -42,15 +40,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     EducationComponent,
     SkillComponent,
     ProyectComponent,
-    NameComponent,
-    TextComponent,
     BodyComponent,
     LanguageComponent,
     FrameworkComponent,
     BodyEditComponent,
     EduEditComponent,
     ExpEditComponent,
-    ExpAltaComponent
+    ExpAltaComponent,
   ],
   imports: [
     BrowserModule,

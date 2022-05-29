@@ -7,17 +7,14 @@ import { Projects } from 'src/environments/projects';
   providedIn: 'root'
 })
 export class ProjectsService {
- //private url:string = "https://agile-citadel-97429.herokuapp.com:8080/projects";
- 
-  url:string="https://agile-citadel-97429.herokuapp.com/projects";
-  constructor(private http:HttpClient) {
-    console.log("Andando servicio");
-       
+  url: string = "https://agile-citadel-97429.herokuapp.com/projects";
+
+  // url:string="http://192.168.0.211:8080/projects";
+  constructor(private http: HttpClient) {}
+  obtenerDatosProyecto(id: number): Observable<Projects> {
+    return this.http.get<Projects>(this.url + "/" + id);
   }
-obtenerDatosProyecto(id:number):Observable<Projects>{
-  return this.http.get<Projects>(this.url+"/"+id);
+  editarDatosProyecto(projects: Projects): Observable<any> {
+    return this.http.put(this.url, projects)
+  }
 }
- editarDatosProyecto(projects:Projects):Observable<any>{
-   return this.http.put(this.url,projects)
- }
-  }

@@ -1,0 +1,62 @@
+<div class="container-fluid bg-dark bg-gradient text-white">
+    <div class="container overflow-hidden">
+        <div class="row gx-5">
+          <div class="col-md-3">
+           <div class=" py-3 text-white"><h4> {{about.name}} </h4>
+            <h6>{{about.title}}</h6></div>
+          </div>
+          <div class="col-md-9">
+            <div class="py-3 text-white"><h6>Sobre mi</h6>
+              <p>{{about.about_text}}</p>
+              <button *ngIf="usuarioAutenticado" class="btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#modalAbout" (click)="mostrarDatosAbout()">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+</div>
+
+<!-- modal about -->
+<div class="modal fade" id="modalAbout" tabindex="-1" aria-labelledby="tituloModalAbout" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="tituloModalAbout">Editar About</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form [formGroup]="form">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="name" formControlName="name">
+                      <div *ngIf="name?.invalid && name?.touched">
+                          <div *ngIf="name?.errors?.['required']" class="text-danger">
+                              Escriba su nombre
+                          </div>
+                          <div *ngIf="name?.errors?.['minlength']" class="text-danger">
+                             El nombre tiene que tener mínimo 5 caracteres.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                      <label for="title" class="form-label">Titulo</label>
+                      <input type="text" class="form-control" id="title" formControlName="title">
+                      <div class="mb-3">
+                          <label for="about_text" class="form-label">About</label>
+                          <input type="text" class="form-control" id="about_text" formControlName="about_text">
+                      </div>
+                      <div class="mb-3">
+                          <label for="url" class="form-label">Url de la imagen</label>
+                          <input type="text" class="form-control" id="url" formControlName="url">
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+              <button type="button" id="cerrarModalAbout" class="btn btn-secondary"
+                  data-bs-dismiss="modal">Salir</button>
+              <button type="button" class="btn btn-primary" (click)="guardarDatosAbout()">Guardar</button>
+          </div>
+      </div>
+  </div>
+</div>  

@@ -32,7 +32,6 @@ export class ProyectComponent implements OnInit {
 
   ngOnInit(): void {
     this.projetcService.obtenerDatosProyecto(1).subscribe(d => {
-      console.log(d);
       this.projects = d;
 
     })
@@ -52,7 +51,7 @@ export class ProyectComponent implements OnInit {
         this.projects = projectEdit;
         document.getElementById("cerrarModalProject")?.click();
       },
-        error:(e)=> {alert("Ups, no se puedo actualizar el registro.")}
+        error:(e)=> {alert("El registro no se pudo actualizar")}
       })
     }
     else{
