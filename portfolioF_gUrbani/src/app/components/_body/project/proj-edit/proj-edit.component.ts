@@ -43,7 +43,7 @@ irAHome(){
     return this.form.get("fecha");
   }
   get url_project() {
-    return this.form.get("url_school");
+    return this.form.get("url_project");
   }
    get img() {
     return this.form.get("img");
