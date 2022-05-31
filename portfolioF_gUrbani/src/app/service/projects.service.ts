@@ -7,9 +7,9 @@ import { Projects } from 'src/environments/projects';
   providedIn: 'root'
 })
 export class ProjectsService {
-  baseUrl: string = "https://agile-citadel-97429.herokuapp.com/projects";
+  //baseUrl: string = "https://agile-citadel-97429.herokuapp.com/projects";
 
-  //baseUrl: string = "http://192.168.0.211:8080/projects";
+  baseUrl: string = "http://192.168.0.211:8080/projects";
   constructor(private http: HttpClient) { }
 
   obtenerListaProject(): Observable<Projects[]> {
