@@ -12,13 +12,13 @@ export class AboutComponent implements OnInit {
 
   about!: About;
 
-  usuarioAutenticado: boolean = true;//al inicio   debe estar en false
+  usuarioAutenticado: boolean = true;
 
   form: FormGroup;
 
   constructor(private aboutService: AboutService, private miFormBuilder: FormBuilder) {
     this.form = this.miFormBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(5)]],
+      name: ['', [Validators.required, Validators.minLength(3)]],
       title: ['', [Validators.required]],
       about_text: ['', [Validators.required]],
       url: ['', [Validators.required]]
@@ -27,6 +27,16 @@ export class AboutComponent implements OnInit {
   get name() {
     return this.form.get("name");
   }
+  get title() {
+    return this.form.get("title");
+  }
+  get about_text() {
+    return this.form.get("about_text");
+  }
+  get url() {
+    return this.form.get("url");
+  }
+  
   ngOnInit(): void {
     this.aboutService.obtenerDatosAbout(1).subscribe(d => {
       console.log(d);

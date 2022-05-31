@@ -6,4 +6,5 @@ export class Experiencia {
     url_cliente: string;
     img: string;
     tecnologias: string;
+    
 }

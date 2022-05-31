@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
 import { Experiencia } from 'src/environments/experiencia';
@@ -10,8 +11,8 @@ import { Experiencia } from 'src/environments/experiencia';
 export class ExperienceComponent implements OnInit {
   experiencia:Experiencia[];
   
-  constructor(private experienciaService: ExperienciaService, private router:Router) { }
-
+  constructor(private experienciaService: ExperienciaService, private router:Router) {}
+  
   ngOnInit(): void {
     
     this.obtenerExperiencia();

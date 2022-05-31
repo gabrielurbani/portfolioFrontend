@@ -1,7 +1,7 @@
 <div class="py-5 container bg-dark text-white">
     <h3 class="text-center py-3">Alta de experiencias</h3>
     <h4 class="text-center py-3">Se mi cliente, agrega mi proximo trabajo</h4>
-    <form (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group my-1">
           
             <input type="text"
@@ -10,7 +10,15 @@
             [(ngModel)]="experiencia.cliente"
             name="cliente"
             placeholder="Cliente"
+            formControlName="cliente"
+            [ngClass]="{'is-invalid':cliente?.invalid && cliente?.touched, 'is-valid':!cliente?.invalid && cliente?.touched}"
             >
+            <div *ngIf="cliente?.invalid && cliente?.touched">
+                <div *ngIf="cliente?.errors?.['required']" class="text-danger">
+                    Escriba su nombre
+                </div>
+            </div>
+           
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -19,7 +27,14 @@
             [(ngModel)]="experiencia.descripcion"
             name="descripcion"
             placeholder="Descripción"
+            formControlName="descripcion"
+            [ngClass]="{'is-invalid':descripcion?.invalid && descripcion?.touched, 'is-valid':!descripcion?.invalid && descripcion?.touched}"
             >
+            <div *ngIf="descripcion?.invalid && descripcion?.touched">
+                <div *ngIf="descripcion?.errors?.['required']" class="text-danger">
+                    Escriba la descripcion del trabajo a realizar
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -28,7 +43,14 @@
             [(ngModel)]="experiencia.fecha"
             name="fecha"
             placeholder="Fecha"
+            formControlName="fecha"
+            [ngClass]="{'is-invalid':fecha?.invalid && fecha?.touched, 'is-valid':!fecha?.invalid && fecha?.touched}"
             >
+            <div *ngIf="fecha?.invalid && fecha?.touched">
+                <div *ngIf="fecha?.errors?.['required']" class="text-danger">
+                    Escriba la fecha estimada del trabajo
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -37,7 +59,14 @@
             [(ngModel)]="experiencia.url_cliente"
             name="url_cliente"
             placeholder="Link a cliente"
+            formControlName="url_cliente"
+            [ngClass]="{'is-invalid':url_cliente?.invalid && url_cliente?.touched, 'is-valid':!url_cliente?.invalid && url_cliente?.touched}"
             >
+            <div *ngIf="url_cliente?.invalid && url_cliente?.touched">
+                <div *ngIf="url_cliente?.errors?.['required']" class="text-danger">
+                    Escriba un link valido
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -46,7 +75,14 @@
             [(ngModel)]="experiencia.tecnologias"
             name="tecnologias"
             placeholder="Tecnologías usadas"
+            formControlName="tecnologias"
+            [ngClass]="{'is-invalid':tecnologias?.invalid && tecnologias?.touched, 'is-valid':!tecnologias?.invalid && tecnologias?.touched}"
             >
+            <div *ngIf="tecnologias?.invalid && tecnologias?.touched">
+                <div *ngIf="tecnologias?.errors?.['required']" class="text-danger">
+                    Escriba las tecnologias necesarias a implementar
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -55,7 +91,14 @@
             [(ngModel)]="experiencia.img"
             name="img"
             placeholder="Imagen"
+            formControlName="img"
+            [ngClass]="{'is-invalid':img?.invalid && img?.touched, 'is-valid':!img?.invalid && img?.touched}"
             >
+            <div *ngIf="img?.invalid && img?.touched">
+                <div *ngIf="img?.errors?.['required']" class="text-danger">
+                    Escriba la direccion de la imagen
+                </div>
+            </div>
         </div>
         
         <button class="btn btn-success">Se mi cliente!</button>

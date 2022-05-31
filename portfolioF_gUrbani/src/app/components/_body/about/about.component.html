@@ -37,21 +37,36 @@
                               Escriba su nombre
                           </div>
                           <div *ngIf="name?.errors?.['minlength']" class="text-danger">
-                             El nombre tiene que tener mínimo 5 caracteres.
+                             El nombre tiene que tener mínimo 3 caracteres.
                           </div>
                       </div>
                   </div>
                   <div class="mb-3">
                       <label for="title" class="form-label">Titulo</label>
                       <input type="text" class="form-control" id="title" formControlName="title">
+                      <div *ngIf="title?.invalid && title?.touched">
+                        <div *ngIf="title?.errors?.['required']" class="text-danger">
+                            Escriba el titulo
+                        </div>
+                        
+                    </div>
+                      
                       <div class="mb-3">
                           <label for="about_text" class="form-label">About</label>
                           <input type="text" class="form-control" id="about_text" formControlName="about_text">
-                      </div>
+                          <div *ngIf="about_text?.invalid && about_text?.touched">
+                            <div *ngIf="about_text?.errors?.['required']" class="text-danger">
+                                Debe escribir algo
+                            </div>
+                        </div></div>
                       <div class="mb-3">
                           <label for="url" class="form-label">Url de la imagen</label>
                           <input type="text" class="form-control" id="url" formControlName="url">
-                      </div>
+                          <div *ngIf="url?.invalid && url?.touched">
+                            <div *ngIf="url?.errors?.['required']" class="text-danger">
+                                Escriba la direccion
+                            </div>
+                        </div></div>
                   </div>
               </form>
           </div>

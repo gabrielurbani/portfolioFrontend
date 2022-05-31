@@ -25,6 +25,8 @@ import { ExpEditComponent } from './components/_body/experiencia/exp-edit/exp-ed
 import { ExpAltaComponent } from './components/_body/experiencia/exp-alta/exp-alta.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProjEditComponent } from './components/_body/project/proj-edit/proj-edit.component';
+import { AvatarComponent } from './components/_header/avatar/avatar.component';
+import { AboutService } from './service/about.service';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,7 @@ import { ProjEditComponent } from './components/_body/project/proj-edit/proj-edi
     ExpEditComponent,
     ExpAltaComponent,
     ProjEditComponent,
+    AvatarComponent
   ],
   imports: [
     BrowserModule,
@@ -58,7 +61,7 @@ import { ProjEditComponent } from './components/_body/project/proj-edit/proj-edi
     ReactiveFormsModule
         
   ],
-  providers: [],
+  providers: [AboutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

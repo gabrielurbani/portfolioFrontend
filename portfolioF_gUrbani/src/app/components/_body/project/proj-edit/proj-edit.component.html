@@ -1,6 +1,6 @@
 <div class="py-5 container bg-dark text-white">
     <h3 class="text-center py-3">Editar experiencias</h3>
-    <form (ngSubmit)="onSubmit()">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="form-group my-1">
           
             <input type="text"
@@ -9,7 +9,14 @@
             [(ngModel)]="project.name"
             name="name"
             placeholder="Nombre"
+            formControlName="name"
+            [ngClass]="{'is-invalid':name?.invalid && name?.touched, 'is-valid':!name?.invalid && name?.touched}"
             >
+            <div *ngIf="name?.invalid && name?.touched">
+                <div *ngIf="name?.errors?.['required']" class="text-danger">
+                    Escriba nombre del project
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -18,7 +25,14 @@
             [(ngModel)]="project.descripcion"
             name="descripcion"
             placeholder="Descripción"
+            formControlName="descripcion"
+            [ngClass]="{'is-invalid':descripcion?.invalid && descripcion?.touched, 'is-valid':!descripcion?.invalid && descripcion?.touched}"
             >
+            <div *ngIf="descripcion?.invalid && descripcion?.touched">
+                <div *ngIf="descripcion?.errors?.['required']" class="text-danger">
+                    Escriba la descripcion del proyecto
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -27,7 +41,14 @@
             [(ngModel)]="project.fecha"
             name="fecha"
             placeholder="Fecha"
+            formControlName="fecha"
+            [ngClass]="{'is-invalid':fecha?.invalid && fecha?.touched, 'is-valid':!fecha?.invalid && fecha?.touched}"
             >
+            <div *ngIf="fecha?.invalid && fecha?.touched">
+                <div *ngIf="fecha?.errors?.['required']" class="text-danger">
+                    Escriba la fecha estimada del proyecto
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -36,7 +57,15 @@
             [(ngModel)]="project.url_project"
             name="url_project"
             placeholder="Link al projecto"
+            formControlName="url_project"
+            [ngClass]="{'is-invalid':url_project?.invalid && url_project?.touched, 'is-valid':!url_project?.invalid && url_project?.touched}"
             >
+            <div *ngIf="url_project?.invalid && url_project?.touched">
+                <div *ngIf="url_project?.errors?.['required']" class="text-danger">
+                    Escriba un link valido
+                </div>
+            </div>
+            
         </div>
         
         <div class="form-group my-1">
@@ -46,7 +75,14 @@
             [(ngModel)]="project.img"
             name="img"
             placeholder="Imagen"
+            formControlName="img"
+            [ngClass]="{'is-invalid':img?.invalid && img?.touched, 'is-valid':!img?.invalid && img?.touched}"
             >
+            <div *ngIf="img?.invalid && img?.touched">
+                <div *ngIf="img?.errors?.['required']" class="text-danger">
+                    Escriba la direccion de la imagen
+                </div>
+            </div>
         </div>
         
         <button class="btn btn-success">Guardar!</button>

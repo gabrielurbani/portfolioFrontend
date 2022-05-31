@@ -1,6 +1,6 @@
 <div class="py-5 container bg-dark text-white">
     <h3 class="text-center py-3">Editar Educacion</h3>
-    <form (ngSubmit)="onSubmit()">
+    <form [formGroup]="form"  (ngSubmit)="onSubmit()">
         <div class="form-group my-1">
           
             <input type="text"
@@ -9,7 +9,14 @@
             [(ngModel)]="education.school"
             name="school"
             placeholder="Nombre del instituto"
+            formControlName="school"
+            [ngClass]="{'is-invalid':school?.invalid && school?.touched, 'is-valid':!school?.invalid && school?.touched}"
             >
+            <div *ngIf="school?.invalid && school?.touched">
+                <div *ngIf="school?.errors?.['required']" class="text-danger">
+                    Escriba nombre de la escuela o instituto o curso
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -18,7 +25,14 @@
             [(ngModel)]="education.descripcion"
             name="descripcion"
             placeholder="Descripción"
+            formControlName="descripcion"
+            [ngClass]="{'is-invalid':descripcion?.invalid && descripcion?.touched, 'is-valid':!descripcion?.invalid && descripcion?.touched}"
             >
+            <div *ngIf="descripcion?.invalid && descripcion?.touched">
+                <div *ngIf="descripcion?.errors?.['required']" class="text-danger">
+                    Escriba la descripcion del curso
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -27,7 +41,14 @@
             [(ngModel)]="education.fecha"
             name="fecha"
             placeholder="Fecha"
+            formControlName="fecha"
+            [ngClass]="{'is-invalid':fecha?.invalid && fecha?.touched, 'is-valid':!fecha?.invalid && fecha?.touched}"
             >
+            <div *ngIf="fecha?.invalid && fecha?.touched">
+                <div *ngIf="fecha?.errors?.['required']" class="text-danger">
+                    Escriba la fecha estimada del trabajo
+                </div>
+            </div>
         </div>
         <div class="form-group my-1">
             <input type="text"
@@ -36,7 +57,14 @@
             [(ngModel)]="education.url_school"
             name="url_school"
             placeholder="Link al instituto"
+            formControlName="url_school"
+            [ngClass]="{'is-invalid':url_school?.invalid && url_school?.touched, 'is-valid':!url_school?.invalid && url_school?.touched}"
             >
+            <div *ngIf="url_school?.invalid && url_school?.touched">
+                <div *ngIf="url_school?.errors?.['required']" class="text-danger">
+                    Escriba un link valido
+                </div>
+            </div>
         </div>
         
         <div class="form-group my-1">
@@ -46,7 +74,14 @@
             [(ngModel)]="education.img"
             name="img"
             placeholder="Imagen"
+            formControlName="img"
+            [ngClass]="{'is-invalid':img?.invalid && img?.touched, 'is-valid':!img?.invalid && img?.touched}"
             >
+            <div *ngIf="img?.invalid && img?.touched">
+                <div *ngIf="img?.errors?.['required']" class="text-danger">
+                    Escriba la direccion de la imagen
+                </div>
+            </div>
         </div>
         
         <a (click)="onSubmit()" type="button" class="p-2 link-light"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
