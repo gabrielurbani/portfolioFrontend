@@ -1,0 +1,62 @@
+<div class="py-5 container bg-dark text-white">
+    <h3 class="text-center py-3">Editar experiencias</h3>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group my-1">
+          
+            <input type="text"
+            class="form-control"
+            id="cliente"
+            [(ngModel)]="experiencia.cliente"
+            name="cliente"
+            placeholder="Cliente"
+            >
+        </div>
+        <div class="form-group my-1">
+            <input type="text"
+            class="form-control"
+            id="descripcion"
+            [(ngModel)]="experiencia.descripcion"
+            name="descripcion"
+            placeholder="Descripción"
+            >
+        </div>
+        <div class="form-group my-1">
+            <input type="text"
+            class="form-control"
+            id="fecha"
+            [(ngModel)]="experiencia.fecha"
+            name="fecha"
+            placeholder="Fecha"
+            >
+        </div>
+        <div class="form-group my-1">
+            <input type="text"
+            class="form-control"
+            id="url_cliente"
+            [(ngModel)]="experiencia.url_cliente"
+            name="url_cliente"
+            placeholder="Link a cliente"
+            >
+        </div>
+        <div class="form-group my-1">
+            <input type="text"
+            class="form-control"
+            id="tecnologias"
+            [(ngModel)]="experiencia.tecnologias"
+            name="tecnologias"
+            placeholder="Tecnologías usadas"
+            >
+        </div>
+        <div class="form-group my-1">
+            <input type="text"
+            class="form-control"
+            id="img"
+            [(ngModel)]="experiencia.img"
+            name="img"
+            placeholder="Imagen"
+            >
+        </div>
+        
+        <button class="btn btn-success">Guardar!</button>
+    </form>
+</div>

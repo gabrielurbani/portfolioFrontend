@@ -1,21 +1,21 @@
 <div class="py-5 container bg-dark text-white">
-    <h3 class="text-center py-3">Alta de experiencias</h3>
+    <h3 class="text-center py-3">Editar Educacion</h3>
     <form (ngSubmit)="onSubmit()">
         <div class="form-group my-1">
           
             <input type="text"
             class="form-control"
-            id="cliente"
-            [(ngModel)]="experiencia.cliente"
-            name="cliente"
-            placeholder="Cliente"
+            id="school"
+            [(ngModel)]="education.school"
+            name="school"
+            placeholder="Nombre del instituto"
             >
         </div>
         <div class="form-group my-1">
             <input type="text"
             class="form-control"
             id="descripcion"
-            [(ngModel)]="experiencia.descripcion"
+            [(ngModel)]="education.descripcion"
             name="descripcion"
             placeholder="Descripción"
             >
@@ -24,7 +24,7 @@
             <input type="text"
             class="form-control"
             id="fecha"
-            [(ngModel)]="experiencia.fecha"
+            [(ngModel)]="education.fecha"
             name="fecha"
             placeholder="Fecha"
             >
@@ -32,21 +32,23 @@
         <div class="form-group my-1">
             <input type="text"
             class="form-control"
-            id="url_cliente"
-            [(ngModel)]="experiencia.url_cliente"
-            name="url_cliente"
-            placeholder="Link a cliente"
+            id="url_school"
+            [(ngModel)]="education.url_school"
+            name="url_school"
+            placeholder="Link al instituto"
             >
         </div>
+        
         <div class="form-group my-1">
             <input type="text"
             class="form-control"
-            id="tecnologias"
-            [(ngModel)]="experiencia.tecnologias"
-            name="tecnologias"
-            placeholder="Tecnologías usadas"
+            id="img"
+            [(ngModel)]="education.img"
+            name="img"
+            placeholder="Imagen"
             >
         </div>
-        <button class="btn btn-success">Save!</button>
+        
+        <button class="btn btn-success">Guardar!</button>
     </form>
 </div>

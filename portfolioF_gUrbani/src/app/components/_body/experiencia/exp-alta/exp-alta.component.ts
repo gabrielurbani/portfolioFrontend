@@ -13,19 +13,18 @@ export class ExpAltaComponent implements OnInit {
   constructor(private experienciaService:ExperienciaService, private router:Router) { }
 
   ngOnInit(): void {
-    
-    
+   
   }
 
   guardarExperiencia(){
     this.experienciaService.saveExperiencia(this.experiencia).subscribe(d =>{
-      this.irABody();
+      this.irAHome();
 
     }, error => console.log(error));
     
   }
-  irABody(){
-    this.router.navigate(['/body']);
+  irAHome(){
+    this.router.navigate(['/home']);
   }
   onSubmit(){
     this.guardarExperiencia();

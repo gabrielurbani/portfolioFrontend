@@ -1,7 +1,7 @@
 <div class="py-3 container bg-dark  text-white">
-  <h3 class="mb-5">Education</h3>
+  <h3 class="mb-5">Educación</h3>
   
-  <div class="card mb-3 mx-5 bg-dark" style="max-width: 960px;--bs-bg-opacity: .5;" *ngFor="let e of educations">
+  <div class="card mb-3 mx-5 bg-dark" style="max-width: 960px;--bs-bg-opacity: .5;" *ngFor="let e of education">
       <div class="row no-gutters">
         <div class="col-md-4">
           <img src="{{e.img}}" class="card-img" alt="...">
@@ -13,6 +13,10 @@
             <p class="card-text">{{e.descripcion}}</p>
             <div class="card-footer border-secondary">
             <a href="{{e.url_school}}" target="_blank" class="btn btn-secondary">Go!</a>
+               
+            <button (click)="editarEducation(e.id)" class="btn btn-info">Editar</button>
+            <button (click)="eliminarEducation(e.id)" class="btn btn-info">Borrar</button>
+       
           </div></div>
         </div>
       </div>

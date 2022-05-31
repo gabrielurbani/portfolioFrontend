@@ -14,7 +14,25 @@ export class EducationService {
   constructor(private http: HttpClient) { }
 
   obtenerListaEducation(): Observable<Education[]> {
-    return this.http.get<Education[]>(`${this.baseUrl}`)
+    return this.http.get<Education[]>(this.baseUrl)
   }
+
+  saveEducation(education: Education): Observable<any> {
+    return this.http.post<any>(this.baseUrl, education);
+  }
+  editarEducation(id: number, education: Education): Observable<any> {
+    return this.http.put(this.baseUrl + "/" + id, education);
+  }
+
+  obtenerEducationPorId(id: number): Observable<Education> {
+    return this.http.get<Education>(this.baseUrl + "/" + id);
+  }
+
+  eliminarEducation(id: number): Observable<Object> {
+    return this.http.delete(this.baseUrl + "/" + id);
+  }
+
+
+
 
 }

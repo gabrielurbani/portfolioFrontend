@@ -11,20 +11,21 @@ import { LoguinComponent } from './components/_header/loguin/loguin.component';
 import { HeroeComponent } from './components/_header/heroe/heroe.component';
 import { LogoComponent } from './components/_header/logo/logo.component';
 import { AboutComponent } from './components/_body/about/about.component'
-import { ExperienceComponent } from './components/_body/_experience/experience/experience.component';
-import { EducationComponent } from './components/_body/_education/education/education.component';
+import { ExperienceComponent } from './components/_body/experiencia/_experience/experience/experience.component';
+import { EducationComponent } from './components/_body/education/education/education.component';
 import { SkillComponent } from './components/_body/_skill/skill/skill.component';
-import { ProyectComponent } from './components/_body/_proyect/proyect/proyect.component';
+import { ProyectComponent } from './components/_body/project/_proyect/proyect/proyect.component';
 import { BodyComponent } from './components/_body/body/body.component';
 import { LanguageComponent } from './components/_body/_skill/language/language.component';
 import { FrameworkComponent } from './components/_body/_skill/framework/framework.component';
 import { HttpClientModule} from '@angular/common/http';
-import { BodyEditComponent } from './components/_body/body-edit/body-edit.component';
-import { EduEditComponent } from './components/_body/edu-edit/edu-edit.component';
+import { EduEditComponent } from './components/_body/education/edu-edit/edu-edit.component';
 import { FormsModule } from '@angular/forms';
-import { ExpEditComponent } from './components/_body/exp-edit/exp-edit.component';
-import { ExpAltaComponent } from './components/_body/exp-alta/exp-alta.component';
+import { ExpEditComponent } from './components/_body/experiencia/exp-edit/exp-edit.component';
+import { ExpAltaComponent } from './components/_body/experiencia/exp-alta/exp-alta.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProjEditComponent } from './components/_body/project/proj-edit/proj-edit.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,10 +44,10 @@ import { ReactiveFormsModule } from '@angular/forms';
     BodyComponent,
     LanguageComponent,
     FrameworkComponent,
-    BodyEditComponent,
     EduEditComponent,
     ExpEditComponent,
     ExpAltaComponent,
+    ProjEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +56,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule
+        
   ],
   providers: [],
   bootstrap: [AppComponent]

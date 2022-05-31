@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BodyEditComponent } from './body-edit.component';
+import { ProjEditComponent } from './proj-edit.component';
 
-describe('BodyEditComponent', () => {
-  let component: BodyEditComponent;
-  let fixture: ComponentFixture<BodyEditComponent>;
+describe('ProjEditComponent', () => {
+  let component: ProjEditComponent;
+  let fixture: ComponentFixture<ProjEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BodyEditComponent ]
+      declarations: [ ProjEditComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BodyEditComponent);
+    fixture = TestBed.createComponent(ProjEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
