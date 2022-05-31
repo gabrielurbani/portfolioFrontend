@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ExperienciaService {
   //backend
-  //private baseUrl = "https://agile-citadel-97429.herokuapp.com/experiencia";
-  baseUrl = "http://192.168.0.211:8080/experiencia";
+  private baseUrl = "https://agile-citadel-97429.herokuapp.com/experiencia";
+  //baseUrl = "http://192.168.0.211:8080/experiencia";
 
   constructor(private http: HttpClient) { }
 

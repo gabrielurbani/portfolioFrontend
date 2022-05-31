@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AboutService {
- // baseUrl: string = "https://agile-citadel-97429.herokuapp.com/about";
-  baseUrl:string="http://192.168.0.211:8080/about";
+  baseUrl: string = "https://agile-citadel-97429.herokuapp.com/about";
+ // baseUrl:string="http://192.168.0.211:8080/about";
   constructor(private http: HttpClient) { }
   obtenerDatosAbout(id: number): Observable<About> {
     return this.http.get<About>(this.baseUrl + "/" + id);
